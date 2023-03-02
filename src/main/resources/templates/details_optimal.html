@@ -5,8 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <link href="http://th:text="${server_address}":8000/css/bootstrap.min.css" rel="stylesheet">
-<!--    <link href="http://192.168.0.52:8000/css/bootstrap.min.css" rel="stylesheet">-->
+    <link th:href="@{${server_address + ':8000/css/bootstrap.min.css'}}" rel="stylesheet">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -178,11 +177,8 @@
         </div>
         <div class="overflow-hidden" style="max-height: 30vh;">
             <div class="container px-5">
-                <img src="http://th:text="${server_address}":8000/2.jpg" class="img-fluid border rounded-3 shadow-lg mb-4"
+                <img th:src="@{${server_address + ':8000/2.jpg'}}" class="img-fluid border rounded-3 shadow-lg mb-4"
                      alt="Example image" width="700" height="500" loading="lazy">
-
-<!--                <img src="http://192.168.0.52:8000/2.jpg" class="img-fluid border rounded-3 shadow-lg mb-4"-->
-<!--                     alt="Example image" width="700" height="500" loading="lazy">-->
             </div>
         </div>
     </div>
@@ -197,8 +193,7 @@
 </footer>
 
 
-<script src="http://th:text="${server_address}":8000/js/bootstrap.bundle.min.js"></script>
-<!--<script src="http://192.168.0.52:8000/js/bootstrap.bundle.min.js"></script>-->
+<script th:src="@{${server_address + ':8000/js/bootstrap.bundle.min.js'}}"></script>
 
 </body>
 </html>

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
-   // private final String server_address = "192.168.4.46";
+    // private final String server_address = "192.168.4.46";
     private final String server_address = "http://192.168.7.208";
 
     @Autowired
@@ -68,7 +68,9 @@ public class MainController {
             message = new Message(title, contacts, full_text);
         }
 
-        messagesRepo.save(message);
+        if (message != null)
+            messagesRepo.save(message);
+
 
         return "msg_sended";
     }

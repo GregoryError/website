@@ -4,8 +4,9 @@
 <head>
     <title>Блог сайта</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link href="http://th:text="th:text="${server_address}"":8000/css/bootstrap.min.css" rel="stylesheet">
-<!--    <link href="http://192.168.0.52:8000/css/bootstrap.min.css" rel="stylesheet">-->
+
+
+    <link th:href="@{${server_address + ':8000/css/bootstrap.min.css'}}" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -62,8 +63,8 @@
 </footer>
 
 
-<script src="http://th:text="th:text="${server_address}"":8000/js/bootstrap.bundle.min.js"></script>
-<!--<script src="http://192.168.0.52:8000/js/bootstrap.bundle.min.js"></script>-->
+<script th:thsrc="@{${server_address + ':8000/js/bootstrap.bundle.min.js'}}"></script>
+
 
 </body>
 </html>
