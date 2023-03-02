@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainController {
 
     // private final String server_address = "192.168.4.46";
-    private final String server_address = "http://192.168.7.208";
+    // private final String server_address = "http://192.168.7.208";
+    // private final String server_address = "http://192.168.0.52";
+    private final String server_address = "http://176.125.128.180";
 
     @Autowired
     MessagesRepo messagesRepo;
@@ -55,10 +57,21 @@ public class MainController {
     }
 
 
-    @PostMapping("/contact/send")
+    @GetMapping("/admin")
+    public String admin(Model model) {
+
+        System.out.println("IN ADMIN");
+
+        return "admin";
+    }
+
+
+    @PostMapping("/send")
     public String contactSend(@RequestParam String title,
                               @RequestParam String contacts,
                               @RequestParam String full_text, Model model) {
+
+        System.out.println("IN SEND");
 
         model.addAttribute("server_address", server_address);
 

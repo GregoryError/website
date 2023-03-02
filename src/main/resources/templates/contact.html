@@ -42,7 +42,7 @@
 <div class="container">
 
 
-    <form action="/contact/send" method="post">
+    <form th:action="@{/send}" method="post">
         <h1>Напишите нам</h1> <br>
         <input type="text" name="title" placeholder="Сфера вашей деятельности." class="form-control"> <br>
         <input type="text" name="contacts" placeholder="Ваш телефон или email для связи." class="form-control"> <br>
