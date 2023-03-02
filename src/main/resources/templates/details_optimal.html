@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.3/examples/carousel/ -->
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="http://th:text="${server_address}":8000/css/bootstrap.min.css" rel="stylesheet">
+<!--    <link href="http://192.168.0.52:8000/css/bootstrap.min.css" rel="stylesheet">-->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Carousel Template · Bootstrap v5.3</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+
+    <link href="./Carousel Template · Bootstrap v5.3_files/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png"
+          sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+          type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+          type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg"
+          color="#712cf9">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+
+
+
+
+
+
+    </style>
+
+    <link href="http://th:text="${server_address}":8000/carousel.css" rel="stylesheet">
+<!--    <link href="http://192.168.0.52:8000/carousel.css" rel="stylesheet">-->
+
+</head>
+<body>
+
+
+<header>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Цифровизация бизнеса</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Начало</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Связаться</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">О нас</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <div class="px-4 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4 fw-bold">Сервисное приложение</h1>
+        <div class="col-lg-6 mx-auto">
+            <h2>Какие функции должно обязательно иметь приложение для бизнеса?</h2>
+            <p class="lead mb-4" align="left">
+                <b>1. Дополнительные продажи</b><br>
+                Если у Вас есть мобильное приложение, Вы даете пользователям возможность покупать когда и где они захотят. От предоставления такого простого и удобного способа покупки, продажи увеличиваются, что дает Вам преимущество перед компаниями, у которых нет мобильного приложения.
+
+                У клиента может не быть времени на посещение магазина или он может не захотеть идти в Ваш магазин, потому что тот далеко от его дома. Однако, мобильное приложение дает возможность совершать покупки где угодно. И для этого не надо сидеть на сайте за ноутбуком или компьютером.
+                <br><br>
+                <b>2. Реферальные программы</b><br>
+                Люди не могут представить свою жизнь без смартфонов. И вы можете использовать это в своих интересах, создав мобильное приложение для своего бизнеса. И добавив функции, которые позволят пользователям делиться со своими друзьями и близкими информацией о ваших товарах или услугах. Можно предоставлять скидки для людей, которые в приложении делятся продуктом с кем-то.
+
+                Также можно включить такие возможности, как:
+
+                доступ к контактам телефона;
+                отправка электронного письма из приложения;
+                поделиться в социальных сетях.
+                Это позволит пользователям делиться информацией с большим количеством людей. И поможет повысить ценность и узнаваемость Вашего бренда.
+                <br><br>
+                <b>3. Уведомления и напоминания</b><br>
+                Мобильное приложение может не только демонстрировать Ваш продукт или услугу, но и отправлять уведомления пользователям. Им можно напоминать о запланированной встрече или сообщать, что пришло время записаться на прием. Также можно время от времени отправлять им уведомления об актуальных предложениях и скидках.
+                <br><br>
+                <b>4. Способы оплаты</b><br>
+                Это еще одна возможность Вашего мобильного приложения, которая поможет сэкономить время Вашим клиентам и бизнесу. Добавление агрегаторов оплаты в приложение позволит пользователям совершать покупку и оплату с помощью кредитной и дебетовой карты, мобильного и интернет-банка, что увеличит продажи.
+                <br><br>
+                <b>5. Повышение клиентского сервиса</b><br>
+                Благодаря мобильным приложениям Вы можете достичь высокого уровня удовлетворенности клиентов, предоставляя им услуги  в режиме реального времени. Одна из возможностей, которую можно использовать -  чат службы поддержки. Такой чат, дает клиентам возможность связаться с Вами по любым вопросам и оперативно получить ответ.
+
+                Можно включить и другие дополнительные функции, например:
+
+                отслеживание статуса заказов,
+                редактирование и отмена услуги,
+                просмотр предыдущих заказов,
+                печать чеков.
+                Это поможет упростить процесс послепродажного обслуживания и получить больше лояльных клиентов.
+
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="/contact" type="button" class="btn btn-primary btn-lg px-4 me-sm-3" >Связаться</a>
+                <a href="/" type="button" class="btn btn-outline-secondary btn-lg px-4">Назад</a>
+            </div>
+        </div>
+        <div class="overflow-hidden" style="max-height: 30vh;">
+            <div class="container px-5">
+                <img src="http://th:text="${server_address}":8000/2.jpg" class="img-fluid border rounded-3 shadow-lg mb-4"
+                     alt="Example image" width="700" height="500" loading="lazy">
+
+<!--                <img src="http://192.168.0.52:8000/2.jpg" class="img-fluid border rounded-3 shadow-lg mb-4"-->
+<!--                     alt="Example image" width="700" height="500" loading="lazy">-->
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<!-- FOOTER -->
+<footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2022 Колесникофф. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+
+
+<script src="http://th:text="${server_address}":8000/js/bootstrap.bundle.min.js"></script>
+<!--<script src="http://192.168.0.52:8000/js/bootstrap.bundle.min.js"></script>-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

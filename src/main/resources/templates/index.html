@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/5.3/examples/carousel/ -->
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <link th:href="@{${server_address + ':8000/css/bootstrap.min.css'}}" rel="stylesheet">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Carousel Template · Bootstrap v5.3</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+
+
+    <link href="./Carousel Template · Bootstrap v5.3_files/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png"
+          sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32"
+          type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16"
+          type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg"
+          color="#712cf9">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+
+
+
+    </style>
+
+    <link th:href="@{${server_address + ':8000/carousel.css'}}" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<header>
+
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Цифровизация бизнеса</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Начало</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Связаться</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">О нас</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+
+<main>
+
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!--        <div class="carousel-indicators">-->
+        <!--            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""-->
+        <!--                    aria-label="Slide 1"></button>-->
+        <!--            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"-->
+        <!--                    class=""></button>-->
+        <!--            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active"-->
+        <!--                    aria-current="true"></button>-->
+        <!--        </div>-->
+
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item">
+
+                <img th:src="@{${server_address + ':8000/0.jpg'}}" class="d-block w-100">-->
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1 align="center">Дизайн.</h1>
+                        <p>«Сейчас свыше 78 процентов людей готовы платить за продукт онлайн.»</p>
+                        <!--                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
+                    </div>
+                </div>
+
+            </div>
+            <div class="carousel-item">
+
+                <img th:src="@{${server_address + ':8000/1.jpg'}}" class="d-block w-100">-->
+
+
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1 align="center">Удобство.</h1>
+                        <p>«В современном мире люди или спят, или всегда на связи.»</p>
+                        <!--                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item active">
+
+
+                <img th:src="@{${server_address + ':8000/2.jpg'}}" class="d-block w-100">-->
+
+
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1 align="center">Рост.</h1>
+                        <p>«Популярность мобильных девайсов растет быстрее, чем все
+                            прогнозы экспертов Google.»</p>
+                        <!--                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- About Apps Markets
+    ================================================== -->
+
+    <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-">Публикация в магазинах приложений</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+
+
+                    <img style="width: 140px;" th:src="@{${server_address + ':8000/App_Store_Badge_RU.jpg'}}">
+
+
+                </div>
+                <h3 class="fs-2">Публикация в App Store</h3>
+                <p>После создания приложения, подготавливаются графические материалы, описание и происходит публикация
+                    на платформе App Store.</p>
+            </div>
+            <div class="feature col">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+
+                    <img style="width: 140px;" th:src="@{${server_address + ':8000/App_google_play_badge_RU.jpg'}}">
+                </div>
+                <h3 class="fs-2">Публикация в Google.Play</h3>
+                <p>После создания приложения, подготавливаются графические материалы, описание и происходит публикация
+                    на платформе Google.Play.</p>
+
+            </div>
+
+            <div class="feature col">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+
+                    <img style="width: 140px;" th:src="@{${server_address + ':8000/cloud_server.jpg'}}">
+
+                </div>
+                <h3 class="fs-2">Создание сервера</h3>
+                <p>Под Ваши задачи создается серверная часть, настраивается база данных и запускается на быстром
+                    хостинге.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+
+    <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4" align="center">
+
+                <img style="width: 140px; height: 140px;" class="bd-placeholder-img rounded-circle" width="140"
+                     height="140" aria-label="Placeholder: 140x140" xmlns="http://www.w3.org/2000/svg" role="img"
+                     focusable="false" th:src="@{${server_address + ':8000/cutaway_app.jpg'}}">
+
+
+                <rect width="100%" height="100%" fill="#777">
+
+                </rect>
+
+
+                <h4>Стандарт</h4>
+                <h2 class="fw-normal">Приложение-визитка <br> IOS + Android <br> Цена от 20'000 ₽</h2>
+                <!--                <p>Мобильное приложение-визитка содержит информацию о компании, о товарах и услугах, контактные данные. <br>- Есть возможность удаленно редактировать информацию. <br>- Клиенты могут отправить Вам сообщение из приложения.</p>-->
+                <p><a class="btn btn-primary btn-lg" href="/details_start">Подробнее »</a></p>
+            </div><!-- /.col-lg-4 -->
+
+            <div class="col-lg-4" align="center">
+
+
+                <img style="width: 140px; height: 140px;" class="bd-placeholder-img rounded-circle" width="140"
+                     height="140" aria-label="Placeholder: 140x140" xmlns="http://www.w3.org/2000/svg" role="img"
+                     focusable="false" th:src="@{${server_address + ':8000/ecommerce_app.jpg'}}">
+
+
+                <rect width="100%" height="100%" fill="#777"></rect>
+
+                <h4>Максимум</h4>
+                <h2 class="fw-normal">Мобильное приложение<br> IOS + Android <br> Цена от 50'000 ₽</h2>
+
+
+                <!--                <p>Вы наполняете вашу базу данных товарами и услугами. Клиенты совершают заказы, после чего вы получаете уведомления и приступаете к выполнению.-->
+                <!--                <br> - Продажи товаров и услуг. <br> - Резервирование услуг (например бронь столов и апартаментов). </p>-->
+                <p><a class="btn btn-primary btn-lg" href="/details_optimal">Подробнее »</a></p>
+            </div><!-- /.col-lg-4 -->
+
+
+            <div class="col-lg-4" align="center">
+                <img style="width: 140px; height: 140px;" class="bd-placeholder-img rounded-circle" width="140"
+                     height="140" aria-label="Placeholder: 140x140" xmlns="http://www.w3.org/2000/svg" role="img"
+                     focusable="false" th:src="@{${server_address + ':8000/site_and_app.jpg'}}">
+
+
+                <rect width="100%" height="100%" fill="#777"></rect>
+
+
+                <h4>Максимум + Сайт</h4>
+                <h2 class="fw-normal">Приложение + сайт<br> IOS + Android <br> Цена от 100'000 ₽</h2>
+                <!--                <p>Наладьте доставку еды из Вашего предприятия. А так же бронь мест.</p>-->
+
+                <p><a class="btn btn-primary btn-lg" href="/details_max">Подробнее »</a></p>
+
+            </div><!-- /.col-lg-4 -->
+
+
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <h1 align="center">Примеры работ:</h1>
+
+        <br><br>
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Приложение "личный кабинет" <span class="text-muted">для оператора связи.</span>
+                </h2>
+                <p class="lead">Приложение позволяет контролировать услуги связи с экрана своего смартфона. <br><br>
+                    Функционал: <br><b>
+                        - контроль состояния счета,<br>
+                        - встроенный чат с технической поддержкой,<br>
+                        - пуш-уведомления,<br>
+                        - контроль доступа.<br></b>
+                </p>
+            </div>
+            <div class="col-md-5">
+
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                     height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                     preserveAspectRatio="xMidYMid slice" focusable="false"
+                     th:src="@{${server_address + ':8000/app_banner_success.jpg'}}">
+
+
+                <rect width="100%" height="100%" fill="#eee"></rect>
+                <text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">Приложение игра<span class="text-muted">.</span>
+                </h2>
+                <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how
+                    this layout would work with some actual real-world content in place.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+
+
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                     height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                     preserveAspectRatio="xMidYMid slice" focusable="false"
+                     th:src="@{${server_address + ':8000/app_banner_game.jpg'}}">
+
+
+                <rect width="100%" height="100%" fill="#eee"></rect>
+                <text x="50%" y="50%" fill="#aaa" dy=".3em"></text>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span
+                        class="text-muted">Checkmate.</span></h2>
+                <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really
+                    intended to be actually read, simply here to give you a better view of what this would look like
+                    with some actual content. Your content.</p>
+            </div>
+            <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                     height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee"></rect>
+                    <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                </svg>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+    </div>
+
+    <!-- /END THE FEATURETTES -->
+
+
+</main>
+
+<!-- FOOTER -->
+<footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2022 Колесникофф </p>
+</footer>
+
+
+<!--<script src="'http://' + ${server_address} + ':8000/js/bootstrap.bundle.min.js"></script>-->
+
+<link th:src="@{${server_address} + ':8000/js/bootstrap.bundle.min.js'}" rel="stylesheet">
+
+
+</body>
+</html>
