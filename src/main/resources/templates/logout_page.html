@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="utf-8">
-
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.108.0">
-    <title>Sidebars · Bootstrap v5.3</title>
+    <title>Heroes · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/heroes/">
     <link th:href="@{${server_address + ':8000/css/bootstrap.min.css'}}" rel="stylesheet">
 
+
+    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -80,51 +81,28 @@
       }
 
 
-
-
-
-
-
     </style>
 
 
     <!-- Custom styles for this template -->
-    <!--    <link href="sidebars.css" rel="stylesheet">-->
-
-    <!--    <link th:href="@{${server_address + ':8000/sidebars.css'}}" rel="stylesheet">-->
-
+    <link href="heroes.css" rel="stylesheet">
 </head>
-
-
 <body>
-
 
 <main>
 
-    <h2 align="center"><br>Сообщения от пользователей: <br></h2>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4" align="center"><br><br>Войдите в центр управления или перейдите на сайт.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <form action="/">
+                <input type="submit" class="btn btn-primary btn-lg px-4 gap-3" value="Главная"/>
+            </form>
 
-    <div th:each="msg : ${messages}" class="alert alert-info mt-2">
-
-        <h4>Область: <br></h4>
-        <p th:text="${msg.title}"></p>
-        <h4>Контакты: <br></h4>
-        <p th:text="${msg.contacts}"></p>
-        <h4>Описание задачи: <br></h4>
-        <p th:text="${msg.full_text}"></p>
-
+            <form action="/admin_login">
+                <input type="submit" class="btn btn-outline-secondary btn-lg px-4" value="Войти"/>
+            </form>
+        </div>
     </div>
-
 </main>
-
-
-<form th:action="@{/logout}" method="post">
-<!--    <input type="submit" value="Sign Out"/>-->
-
-    <a href="/contact" type="submit" class="btn btn-primary btn-lg px-4 me-sm-3" >Выйти</a>
-
-    <input type="hidden" name="_csrf" value="{{_csrf.token}}">
-</form>
-
-
 </body>
 </html>

@@ -26,9 +26,10 @@ public class WebSecurityConfig {
                 )
                 .formLogin((form) -> form
                         .loginPage("/admin_login")
-                        .permitAll()
+                        .defaultSuccessUrl("/admin", true)  // !after successful login always open admin-page!
+
                 )
-                .logout((logout) -> logout.permitAll().logoutSuccessUrl("/admin_login"));
+                .logout((logout) -> logout.permitAll().logoutSuccessUrl("/logout_page"));
 
         return http.build();
     }

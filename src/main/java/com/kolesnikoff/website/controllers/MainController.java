@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class MainController {
 
     // private final String server_address = "192.168.4.46";
-    // private final String server_address = "http://192.168.7.208";
+     private final String server_address = "http://192.168.7.208";
     // private final String server_address = "http://192.168.0.52";
-    private final String server_address = "http://176.125.128.180";
+    // private final String server_address = "http://176.125.128.180";
 
     @Autowired
     MessagesRepo messagesRepo;
@@ -62,7 +62,18 @@ public class MainController {
 
         System.out.println("IN ADMIN");
 
+        Iterable<Message> messages = messagesRepo.findAll();
+
+        model.addAttribute("server_address", server_address);
+        model.addAttribute("messages", messages);
+
         return "admin";
+    }
+
+    @GetMapping("/logout_page")
+    public String logoutPage(Model model) {
+        model.addAttribute("server_address", server_address);
+        return "logout_page";
     }
 
 

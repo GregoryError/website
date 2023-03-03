@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
 
-<head><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
+<head>
+    <style class="darkreader darkreader--fallback" media="screen"></style>
+    <style class="darkreader darkreader--text" media="screen"></style>
+    <style class="darkreader darkreader--invert" media="screen">.jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, #bit-notification-bar-iframe, ::-webkit-calendar-picker-indicator {
     filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
-}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+}
+    </style>
+    <style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
   background-color: var(--darkreader-inline-bgcolor) !important;
 }
 [data-darkreader-inline-bgimage] {
@@ -41,12 +46,17 @@
 }
 [data-darkreader-inline-stopcolor] {
   stop-color: var(--darkreader-inline-stopcolor) !important;
-}</style><style class="darkreader darkreader--variables" media="screen">:root {
+}
+    </style>
+    <style class="darkreader darkreader--variables" media="screen">:root {
    --darkreader-neutral-background: #131516;
    --darkreader-neutral-text: #d8d4cf;
    --darkreader-selection-background: #004daa;
    --darkreader-selection-text: #e8e6e3;
-}</style><style class="darkreader darkreader--root-vars" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">html {
+}
+    </style>
+    <style class="darkreader darkreader--root-vars" media="screen"></style>
+    <style class="darkreader darkreader--user-agent" media="screen">html {
     background-color: #181a1b !important;
 }
 html {
@@ -81,16 +91,20 @@ select:-webkit-autofill {
 ::-moz-selection {
     background-color: #004daa !important;
     color: #e8e6e3 !important;
-}</style>
+}
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Вход</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <style class="darkreader darkreader--sync" media="screen"></style>
-    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"><style class="darkreader darkreader--sync" media="screen"></style>
-    <meta name="darkreader" content="e7fa85a745998f9ad5be84e4c943559c"><style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
+    <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous">
+    <style class="darkreader darkreader--sync" media="screen"></style>
+    <meta name="darkreader" content="e7fa85a745998f9ad5be84e4c943559c">
+    <style class="darkreader darkreader--override" media="screen">.vimvixen-hint {
     background-color: #7b5300 !important;
     border-color: #d8b013 !important;
     color: #f3e8c8 !important;
@@ -129,7 +143,9 @@ gr-main-header {
 }
 .tou-6i3zyv {
     background-color: #19576c !important;
-}</style></head>
+}
+    </style>
+</head>
 
 
 <!--<head>-->
@@ -175,11 +191,13 @@ gr-main-header {
         <h2 class="form-signin-heading">Пожалуйста авторизуйтесь</h2>
         <p>
             <label for="username" class="sr-only">Username</label>
-            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="" autofocus="">
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required=""
+                   autofocus="">
         </p>
         <p>
             <label for="password" class="sr-only">Password</label>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                   required="">
         </p>
         <input type="hidden" name="_csrf" value="{{_csrf.token}}">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
@@ -188,9 +206,23 @@ gr-main-header {
 </body>
 
 
-
-
-
-
-
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
