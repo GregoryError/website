@@ -79,6 +79,17 @@
         -webkit-overflow-scrolling: touch;
       }
 
+      .msg-block {
+        display: inline-block;
+        margin: 8px;
+        background-color: rgb(151, 240, 187);
+        padding: 6px;
+      }
+
+
+
+
+
 
 
 
@@ -103,27 +114,26 @@
 
     <h2 align="center"><br>Сообщения от пользователей: <br></h2>
 
-    <div th:each="msg : ${messages}" class="alert alert-info mt-2">
-
-        <h4>Область: <br></h4>
-        <p th:text="${msg.title}"></p>
-        <h4>Контакты: <br></h4>
-        <p th:text="${msg.contacts}"></p>
-        <h4>Описание задачи: <br></h4>
-        <p th:text="${msg.full_text}"></p>
+    <div th:each="msg : ${messages}" class="items">
+        <div class="msg-block">
+            <h5>Область: <br></h5>
+            <p th:text="${msg.title}"></p>
+            <h5>Контакты: <br></h5>
+            <p th:text="${msg.contacts}"></p>
+            <h5>Описание задачи: <br></h5>
+            <p th:text="${msg.full_text}"></p>
+        </div>
 
     </div>
 
 </main>
 
-
-<form th:action="@{/logout}" method="post">
-<!--    <input type="submit" value="Sign Out"/>-->
-
-    <a href="/contact" type="submit" class="btn btn-primary btn-lg px-4 me-sm-3" >Выйти</a>
-
-    <input type="hidden" name="_csrf" value="{{_csrf.token}}">
-</form>
+<div align="center" style="margin-bottom: 100px">
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" class="btn btn-primary btn-lg px-4 me-sm-3" value="Выйти"/>
+        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+    </form>
+</div>
 
 
 </body>
