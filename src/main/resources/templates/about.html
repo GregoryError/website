@@ -9,7 +9,7 @@
 
     <!--    <link href="http://192.168.7.208:8000/css/bootstrap.min.css" rel="stylesheet">-->
 
-    <link th:href="@{${server_address + ':8000/css/bootstrap.min.css'}}" rel="stylesheet">
+    <link th:href="@{${server_address + ':8000/styles/css/bootstrap.min.css'}}" rel="stylesheet">
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,27 +18,23 @@
     <meta name="generator" content="Hugo 0.108.0">
     <title>Carousel Template · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link th:href="@{${server_address + ':8000/styles/css/carousel.css'}}" rel="stylesheet"/>
 
 
     <link href="./Carousel Template · Bootstrap v5.3_files/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png"
-          sizes="180x180">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32"
-          type="image/png">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16"
-          type="image/png">
-    <link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg"
-          color="#712cf9">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
-    <meta name="theme-color" content="#712cf9">
-
 
     <style>
+        body {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            background-color: black;
+            }
+
+
+
+
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -90,21 +86,7 @@
         -webkit-overflow-scrolling: touch;
       }
 
-      .main-block {
-        margin: 10px;
-        margin-top: 150px;
-      }
-
-
-
-
-
-
     </style>
-
-    <!--    <link href="http://192.168.0.52:8000/carousel.css" rel="stylesheet">-->
-    <link href="http://th:text=" ${server_address}
-    ":8000/carousel.css" rel="stylesheet">
 
 
 </head>
@@ -113,7 +95,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Цифровизация бизнеса</a>
+            <a class="navbar-brand" href="/">Колесников web</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -121,13 +103,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Начало</a>
+                        <a class="nav-link" aria-current="page" href="/">Главная</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Связаться</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">О нас</a>
+                        <a class="nav-link active" href="/about">О студии</a>
                     </li>
                 </ul>
 
@@ -140,34 +122,121 @@
 
 <main>
 
-    <div class="main-block">
-        <p>Examples
-            Quickly get a project started with any of our examples ranging from using parts of the framework to custom
-            components and layouts.Examples
-            Quickly get a project started with any of our examples ranging from using parts of the framework to custom
-            components and layouts.Examples
-            Quickly get a project started with any of our examples ranging from using parts of the framework to custom
-            components and layouts.Examples
-            Quickly get a project started with any of our examples ranging from using parts of the framework to custom
-            components and layouts.Examples
-            Quickly get a project started with any of our examples ranging from using parts of the framework to custom
-            components and layouts.Examples
-            Quickly get a project started with any of our examples ranging from using parts of the framework to custom
-            components and layouts.Examples
-            Quickly get a project started with any of our examples ranging from using parts of the framework to custom
-            components and layouts.Examples
-            Quickly get a project started with any of our examples ranging from using parts of the framework to custom
-            components and layouts.</p>
+    <hr class="sep"/>
+
+    <div class="text_wraper">
+
+        <div class="bio">
+            <h2 class="bio_head">Обо мне</h2>
+            <p>
+                Здравствуйте. Меня зовут Григорий Колесников и я занимаюсь созданием
+                web-приложений: сайты на основе Rest-сервисов, web-сервера. Так же
+                создаю приложения для платформы Android. Я так же размещаю сайты и
+                приложения в сети и в магазинах приложений. <br/><br/>
+                В работе для меня наиболее ценны дизайн и производительность. Поэтому
+                я считаю важной каждую деталь, а в качестве инструментов использую
+                быстродействующие технологии.
+            </p>
+        </div>
 
     </div>
+
+    <hr class="sep"/>
+
+
+    <div class="text_wraper">
+        <div class="tech_desc">
+            <button
+                    class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#dashboard-collapse"
+                    aria-expanded="false"
+            >
+                <h2 class="tech_text">Используемые технологии</h2>
+                <img class="down_arrow_img" th:src="@{${server_address + ':8000/images/down-arrow.jpg'}}"
+                     lt="технологии создания сайтов"
+                />
+
+            </button>
+            <div class="collapse" id="dashboard-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                        <a
+                                href="https://ru.wikipedia.org/wiki/Spring_Framework"
+                                class="link-dark d-inline-flex text-decoration-none rounded"
+                        >
+                            <img
+                                    class="tech_logo"
+                                    th:src="@{${server_address + ':8000/images/spring-boot.png'}}"
+                                    alt="spring boot"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                                href="https://ru.wikipedia.org/wiki/Java"
+                                class="link-dark d-inline-flex text-decoration-none rounded"
+                        >
+                            <img class="tech_logo" th:src="@{${server_address + ':8000/images/cpp_logo.png'}}"
+                                 alt="C++"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                                href="https://ru.wikipedia.org/wiki/C%2B%2B"
+                                class="link-dark d-inline-flex text-decoration-none rounded"
+                        >
+                            <img class="tech_logo" th:src="@{${server_address + ':8000/images/java_logo.png'}}"
+                                 alt="java"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                                href="https://ru.wikipedia.org/wiki/Qt"
+                                class="link-dark d-inline-flex text-decoration-none rounded"
+                        >
+                            <img class="tech_logo" th:src="@{${server_address + ':8000/images/qt_logo.png'}}"
+                                 alt="Qt"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                                href="https://ru.wikipedia.org/wiki/Bootstrap_(%D1%84%D1%80%D0%B5%D0%B9%D0%BC%D0%B2%D0%BE%D1%80%D0%BA)"
+                                class="link-dark d-inline-flex text-decoration-none rounded"
+                        >
+                            <img
+                                    class="tech_logo"
+                                    th:src="@{${server_address + ':8000/images/bootstrap_png.png'}}"
+                                    alt="Bootstrap"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                                href="https://ru.wikipedia.org/wiki/%D0%92%D1%91%D1%80%D1%81%D1%82%D0%BA%D0%B0_%D0%B2%D0%B5%D0%B1-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86"
+                                class="link-dark d-inline-flex text-decoration-none rounded"
+                        >
+                            <img
+                                    class="tech_logo"
+                                    th:src="@{${server_address + ':8000/images/html_js_css_logo.png'}}"
+                                    alt="html css js"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="sep"/>
+
 
 </main>
 
 <!-- FOOTER -->
 <footer class="container mt-5">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>© 2022 Колесникофф.
+    <p>© 2023 Колесников.
 </footer>
-
+<script th:src="@{${server_address} + ':8000/styles/js/bootstrap.bundle.min.js'}" rel="stylesheet"></script>
 </body>
 </html>

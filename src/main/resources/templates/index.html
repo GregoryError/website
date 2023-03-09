@@ -8,7 +8,6 @@
     <meta name="author" content="Kolesnikov"/>
     <title>Колесников web</title>
 
-    <!--    <link rel="stylesheet" href="styles/css/bootstrap.min.css" />-->
     <link th:href="@{${server_address + ':8000/styles/css/bootstrap.min.css'}}" rel="stylesheet">
 
     <link th:href="@{${server_address + ':8000/styles/css/carousel.css'}}" rel="stylesheet"/>
@@ -80,7 +79,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Колесников web</a>
+            <a class="navbar-brand" href="/">Колесников web</a>
             <button
                     class="navbar-toggler"
                     type="button"
@@ -95,15 +94,15 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html"
+                        <a class="nav-link active" aria-current="page" href="/"
                         >Главная</a
                         >
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Связаться</a>
+                        <a class="nav-link" href="/contact">Связаться</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">О студии</a>
+                        <a class="nav-link" href="/about">О студии</a>
                     </li>
                 </ul>
             </div>
@@ -147,7 +146,7 @@
     </div>
 
     <div class="price_btn" style="align-items: center">
-        <a href="#"
+        <a href="/contact"
         >
             <button
                     type="button"
@@ -226,7 +225,6 @@
         </button>
     </div>
 
-    <hr class="sep"/>
 
     <div class="text_wraper">
 
@@ -261,7 +259,7 @@
                      lt="технологии создания сайтов"
                 />
             </button>
-            <div class="collapse" id="dashboard-collapse">
+            <div class="collapse show" id="dashboard-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                     <li>
                         <a
@@ -331,7 +329,6 @@
         </div>
     </div>
 
-    <hr class="sep"/>
 
     <div class="text_wraper">
 
@@ -431,7 +428,7 @@
 
     <h2 style="color: white;">Причины сотрудничать с Колесников web</h2>
 
-    <div class="row" style="text-align: left;">
+    <div class="col" style="text-align: left;">
       <div class="col-lg-4 col-md-6 mt-4">
         <p>Работа выполняется в срок.</p>
       </div>
@@ -460,7 +457,7 @@
     </div>
 
     <div class="price_btn" style="align-items: center">
-        <a href="#"
+        <a href="/contact"
         >
             <button
                     type="button"

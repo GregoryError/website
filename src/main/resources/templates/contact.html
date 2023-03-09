@@ -2,44 +2,51 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <title>Блог сайта</title>
+    <title>Колесников web</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-
-    <link th:href="@{${server_address + ':8000/css/bootstrap.min.css'}}" rel="stylesheet">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Kolesnikov"/>
+    <title>Колесников web</title>
 
+
+    <link th:href="@{${server_address + ':8000/styles/css/bootstrap.min.css'}}" rel="stylesheet">
+    <link th:href="@{${server_address + ':8000/styles/css/carousel.css'}}" rel="stylesheet"/>
 
 </head>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">Цифровизация бизнеса</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/">Начало</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact">Связаться</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">О нас</a>
-                </li>
-            </ul>
 
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Колесников web</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/contact">Связаться</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">О студии</a>
+                    </li>
+                </ul>
+
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<body class="bg-light">
+</header>
 
-<div class="container">
+
+<div class="container" style="margin-top: 3rem;">
 
 
     <form th:action="@{/send}" method="post">
@@ -58,12 +65,11 @@
 
 <!-- FOOTER -->
 <footer class="container mt-5">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>© 2022 Колесникофф.
+    <p>© 2023 Колесников.
 </footer>
 
 
-<script th:thsrc="@{${server_address + ':8000/js/bootstrap.bundle.min.js'}}"></script>
+<script th:src="@{${server_address} + ':8000/styles/js/bootstrap.bundle.min.js'}" rel="stylesheet" ></script>
 
 
 </body>

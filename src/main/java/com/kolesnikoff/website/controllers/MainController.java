@@ -14,8 +14,8 @@ public class MainController {
 
     // private final String server_address = "192.168.4.46";
 //    private final String server_address = "http://192.168.7.123";
-     private final String server_address = "http://192.168.0.52";
-//     private final String server_address = "http://176.125.128.180";
+//     private final String server_address = "http://192.168.0.52";
+     private final String server_address = "http://176.125.128.180";
 
     @Autowired
     MessagesRepo messagesRepo;
@@ -23,6 +23,7 @@ public class MainController {
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("server_address", server_address);
+        
         return "index";
     }
 
